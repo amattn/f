@@ -7,8 +7,8 @@ import (
 
 const (
 	internalIdentifier           = "f"
-	internalBuildTimestamp int64 = 1599193553
-	internalBuildNumber    int64 = 3
+	internalBuildTimestamp int64 = 1599193613
+	internalBuildNumber    int64 = 6
 	internalVersionString        = "0.1.0"
 )
 
