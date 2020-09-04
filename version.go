@@ -1,15 +1,14 @@
 package main
 
-
 import (
-"fmt"
-"time"
+	"fmt"
+	"time"
 )
 
 const (
 	internalIdentifier           = "f"
-	internalBuildTimestamp int64 = 1599092654
-	internalBuildNumber    int64 = 01
+	internalBuildTimestamp int64 = 1599193553
+	internalBuildNumber    int64 = 3
 	internalVersionString        = "0.1.0"
 )
 

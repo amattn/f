@@ -8,8 +8,8 @@ import (
 )
 
 var (
-	showV    bool
-	showVersion    bool
+	showV             bool
+	showVersion       bool
 	flagConfigPath    string
 	shouldMakeFrcFile bool
 	shouldPrint       bool
@@ -28,11 +28,10 @@ func init() {
 func main() {
 	flag.Parse()
 
-	if showVersion || showV{
+	if showVersion || showV {
 		fmt.Println(VersionInfo())
 		os.Exit(0)
 	}
-
 
 	prependConfigPath(flagConfigPath)
 
