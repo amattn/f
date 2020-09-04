@@ -4,15 +4,20 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
 )
 
 var (
+	showV    bool
+	showVersion    bool
 	flagConfigPath    string
 	shouldMakeFrcFile bool
 	shouldPrint       bool
 )
 
 func init() {
+	flag.BoolVar(&showV, "v", false, "show version info and exit(0)")
+	flag.BoolVar(&showVersion, "version", false, "show version info and exit(0)")
 	flag.StringVar(&flagConfigPath, "config", "", "path to config file, defaults to ~/.frc")
 	flag.BoolVar(&shouldMakeFrcFile, "init", false, "Attempt to create config file.")
 	flag.BoolVar(&shouldPrint, "print", false, "Print command to stdout, do not run in separate process")
@@ -22,6 +27,13 @@ func init() {
 
 func main() {
 	flag.Parse()
+
+	if showVersion || showV{
+		fmt.Println(VersionInfo())
+		os.Exit(0)
+	}
+
+
 	prependConfigPath(flagConfigPath)
 
 	if shouldMakeFrcFile {
