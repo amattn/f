@@ -1,5 +1,6 @@
 # ignore go build artifact
 f
+f_*
 
 .idea
 
